@@ -1,7 +1,7 @@
 // eslint-disable-next-line
-import React, { useState } from 'react';
-import './Calculator.css';
-import image from "./image/abstractabc.jpg"
+import React, { useState } from "react";
+import "./Calculator.css";
+import image from "./image/abstractabc.jpg";
 
 
 const Calculator = () => {
@@ -19,14 +19,15 @@ const backspace = () => {
 setResult(result.slice(0, -1)); // (0,-1)
 }
 const calculate = () => {
-try{
-  // eslint-disable-next-line
-  setResult(eval(result).toString());
-}catch(error) {
-  setResult("error");
+  try {
+    // eslint-disable-next-line no-eval
+    setResult((new Function('return ' + result))());
+  } catch (error) {
+    setResult("error");
+  }
 }
- 
-}
+
+
     return(
    <>
     
