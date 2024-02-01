@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 import React, { useState } from 'react';
 import './Calculator.css';
 import image from "./image/abstractabc.jpg"
@@ -19,6 +20,7 @@ setResult(result.slice(0, -1)); // (0,-1)
 }
 const calculate = () => {
 try{
+  // eslint-disable-next-line
   setResult(eval(result).toString());
 }catch(error) {
   setResult("error");
