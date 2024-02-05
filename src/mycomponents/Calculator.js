@@ -1,7 +1,6 @@
 // eslint-disable-next-line
 import React, { useState } from "react";
 import "./Calculator.css";
-import image from "./image/abstractabc.jpg";
 
 
 const Calculator = () => {
